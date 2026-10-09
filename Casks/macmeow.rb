@@ -32,13 +32,11 @@ cask "macmeow" do
         "~/Library/Saved Application State/tw.macmeow.launcher.savedState",
       ]
 
-  caveats do
-    requires_rosetta
-    <<~EOS
-      MacMeow 需要 Cyder：https://github.com/dspp779/CyderBits/releases
+  caveats <<~EOS
+    MacMeow 需要 Cyder（x86_64 Wine，需要 Rosetta 2）：
+      https://github.com/dspp779/CyderBits/releases
 
-      移除前請先依 README「移除」還原 Cyder engine 的修補：
-        https://github.com/xlanstar/mac-meow#移除
-    EOS
-  end
+    移除前請先依 README「移除」還原 Cyder engine 的修補：
+      https://github.com/xlanstar/mac-meow#移除
+  EOS
 end
